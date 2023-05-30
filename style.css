@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Harmattan:wght@700&family=Noto+Kufi+Arabic:wght@300&family=Noto+Nastaliq+Urdu:wght@500&family=Tajawal:wght@300&family=Vazirmatn:wght@300;400&display=swap');
+body {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 85px;
+    background-color: #348aff;
+    border-radius: 20px;
+    filter: drop-shadow(-5px 5px 100px #348aff);
+    transition: 500ms;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    width: 35px;
+    translate: 1px;
+    height: 35px;
+    border-top-right-radius: 35px;
+    box-shadow: 11px -10px 0 10px #348aff;
+}
+
+.toggle {
+    position: absolute;
+    background-color: #348aff;
+    bottom: -60px;
+    left: 50%;
+    width: 70px;
+    transform: translateX(-50%);
+    height: 60px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    cursor: pointer;
+}
+
+.toggle::after {
+    content: "";
+    position: absolute;
+    right: -35px;
+    width: 35px;
+    translate: -1px;
+    height: 35px;
+    border-top-left-radius: 35px;
+    box-shadow: -11px -10px 0 10px #348aff;
+}
+
+.card.active .toggle span {
+    transform: translate(-30px, 10%) rotate(225deg);
+}
+
+.card.active {
+    height: 400px;
+}
+
+.toggle span {
+    top: 40%;
+    transform: translate(-30px) rotate(45deg);
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transition: 500ms ease-in-out;
+}
+
+.content-box .content-img img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100px;
+    margin-right: 20px;
+    height: 100px;
+}
+
+.content-box .content {
+    position: relative;
+    padding: 5px;
+    z-index: 10;
+    font-family: 'Amiri', serif;
+    font-family: 'Harmattan', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.content-box {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.allcard {
+    justify-content: center;
+    display: flex;
+    gap: 200px;
+    flex-wrap: wrap;
+}
+
+.content-3 {
+    overflow-y: auto;
+    display: flex;
+    transform: translateY(-20px);
+    width: 300px;
+    padding-right: 20px;
+    color: white;
+    font-family: 'Amiri', serif;
+    font-family: 'Harmattan', sans-serif;
+}
